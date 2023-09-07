@@ -12,8 +12,8 @@ with open("/work/users/ao582fpoy/train/spotifydbdumpshare.sql", 'rb') as big_dat
                 left, right = pair.split(",")
                 left = left.strip("'(")  # Remove leading single quote and opening parenthesis
                 right = right.strip(")'")  # Remove trailing single quote and closing parenthesis
-                file.write(left + ", track_belongs_to_artist, " + right + ";\n")  # Add semicolon and newline
-                print(left + ", track_belongs_to_artist, " + right + ";")
+                file.write(left + ", track_belongs_to_artist, " + right + "\n")  # Add semicolon and newline
+                print(left + ", track_belongs_to_artist, " + right + "\n")
     file.close()
 
 
